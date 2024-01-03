@@ -52,7 +52,6 @@ export const deleteUser = async (clerkId: string) => {
       ),
     ]);
 
-    // Delete user
     const deletedUser = await User.findByIdAndDelete(userToDelete._id);
     revalidatePath("/");
 
